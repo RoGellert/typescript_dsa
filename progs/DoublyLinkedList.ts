@@ -27,17 +27,20 @@ export default class DoublyLinkedList<T> {
         this.head = new_node;
     }
     insertAt(item: T, idx: number): void {
-        let new_node: Node<T> = {value: item} as Node<T>
-        ++this.length;
-        if (!this.head || !this.tail) {
-            this.tail = this.head = new_node;
+        if (idx === this.length - 1) {
+            this.prepend(item);
             return;
         }
 
         if (idx === this.length - 1) {
-            this.tail.next = new_node;
-            new_node.prev = this.tail;
-            this.tail = new_node;
+            this.append(item);
+            return;
+        }
+
+        let new_node: Node<T> = {value: item} as Node<T>
+        ++this.length;
+        if (!this.head || !this.tail) {
+            this.tail = this.head = new_node;
             return;
         }
         
