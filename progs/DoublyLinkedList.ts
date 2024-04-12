@@ -27,6 +27,7 @@ export default class DoublyLinkedList<T> {
         this.head = new_node;
     }
     insertAt(item: T, idx: number): void {
+        // I'm on vacation (for now)
         if (idx === this.length - 1) {
             this.prepend(item);
             return;
