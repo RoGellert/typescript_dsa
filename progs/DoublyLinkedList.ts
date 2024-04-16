@@ -39,12 +39,15 @@ export default class DoublyLinkedList<T> {
 
         let new_node: Node<T> = {value: item} as Node<T>
         ++this.length;
-        let counter = 0;
+        let counter = 1;
         let curr_node = this.head;
         while (counter != idx) {
             ++counter;
             curr_node = curr_node?.next;
         }
+
+        let after_curr = curr_node?.next;
+        curr_node?.next = new_node;
     }
     append(item: T): void {
 
