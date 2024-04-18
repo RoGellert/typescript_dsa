@@ -27,7 +27,8 @@ export default class DoublyLinkedList<T> {
         this.head = new_node;
     }
     insertAt(item: T, idx: number): void {
-        if (idx === 0) {
+        let curr_node = this.head;
+        if (curr_node === undefined) {
             this.prepend(item);
             return;
         }
@@ -40,15 +41,14 @@ export default class DoublyLinkedList<T> {
         let new_node: Node<T> = {value: item} as Node<T>
         ++this.length;
         let counter = 1;
-        let curr_node = this.head;
         while (counter != idx) {
             ++counter;
             curr_node = curr_node?.next;
         }
 
         let after_curr = curr_node?.next;
-        curr_node?.next = new_node;
-        //aaaaaaaaaaa
+        curr_node.next = new_node;
+        //man typescript for dsa is hard
     }
     append(item: T): void {
 
