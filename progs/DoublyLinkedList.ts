@@ -49,6 +49,7 @@ export default class DoublyLinkedList<T> {
         let after_curr = curr_node?.next;
         curr_node.next = new_node;
         //man typescript for dsa is hard
+        //yes
     }
     append(item: T): void {
 
