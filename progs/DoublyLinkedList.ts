@@ -50,6 +50,7 @@ export default class DoublyLinkedList<T> {
         curr_node.next = new_node;
         //man typescript for dsa is hard
         //yes
+        //man only primagen will help
     }
     append(item: T): void {
 
