@@ -51,6 +51,7 @@ export default class DoublyLinkedList<T> {
         //man typescript for dsa is hard
         //yes
         //man only primagen will help
+        // Parlo itliano adesso
     }
     append(item: T): void {
 
