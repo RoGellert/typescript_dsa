@@ -52,6 +52,7 @@ export default class DoublyLinkedList<T> {
         //yes
         //man only primagen will help
         // Parlo itliano adesso
+        // fasfsf
     }
     append(item: T): void {
 
